@@ -20,4 +20,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . /app
 
 # Run the app (or start your app as per your need)
-CMD ["python3", "main.py"]  # Change this as per your app
+CMD ["python3", "main.py"]
