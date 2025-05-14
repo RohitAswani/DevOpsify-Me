@@ -67,7 +67,7 @@ docker-compose logs -f
 Accessing the Web Application
 After running docker-compose up -d, the web application should be available at:
 
-http://localhost:5000
+http://localhost:5000/health
 
 Stopping the Containers
 To stop the running containers, use the following command:
