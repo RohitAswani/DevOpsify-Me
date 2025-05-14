@@ -1,0 +1,14 @@
+services:
+  web:
+    build:
+      context: ./app                 # Path to the app directory containing the Dockerfile
+      dockerfile: Dockerfile        # Explicitly specify the Dockerfile name
+    ports:
+      - "5000:5000"                  # Map host port 5000 to container port 5000
+    restart: unless-stopped         # Automatically restart the container unless it is manually stopped
+
+  watchtower:
+    image: containrrr/watchtower    # Use the Watchtower image to auto-update containers
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock  # Give Watchtower access to the Docker socket
+    restart: unless-stopped         # Keep Watchtower running unless manually stopped
